@@ -58,7 +58,7 @@ def test_sin2():
     assert sin(90) != 2
 
 def test_cos():
-    assert cos(90) == 0
+    assert abs(cos(90)) < 1e-9
 
 def test_cos2():
     assert cos(90) != 1

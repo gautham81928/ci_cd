@@ -19,10 +19,10 @@ def log (a):
     return math.log(a)
 
 def sin (a):
-    return math.sin(a)
+    return math.sin(math.radians(a))
 
 def cos (a):
-    return math.cos(a)
+    return math.cos(math.radians(a))
 
 def square_root (a):
     return math.sqrt(a)
