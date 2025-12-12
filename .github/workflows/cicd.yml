@@ -56,5 +56,7 @@ jobs:
     steps:
       - name: deploy the artifacts
         uses: actions/deploy-pages@v4
+        with:
+          path: ./sites
     
     
