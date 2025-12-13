@@ -21,11 +21,17 @@ def test_add():
 def test_add2():
     assert add(5, 6) != 10
 
+def test_add3():
+    assert add(5, 10) == 15
+
 def test_subtract():
     assert subtraction(6, 5) == 1
 
 def test_subtract2():
     assert subtraction(10, 4) != 5
+
+def test_subtract3():
+    assert subtraction(10, 4) == 6
 
 def test_multiply():
     assert multiplication(5, 6) == 30
