@@ -30,6 +30,9 @@ def test_subtract():
 def test_subtract2():
     assert subtraction(10, 4) != 5
 
+def test_subtract3():
+    assert subtraction(10, 4) == 6
+
 def test_multiply():
     assert multiplication(5, 6) == 30
 
