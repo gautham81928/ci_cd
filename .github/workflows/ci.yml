@@ -26,4 +26,23 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run tests
-        run: pytest
+        run: pytest - q
+
+      - name: Run tests with coverage
+        run: |
+          pytest \
+            --cov=. \
+            --cov-report=term \
+            --cov-report=html \
+            --cov-report=xml
+
+      - name: Prepare artifacts
+        run: |
+          mkdir sites
+          mv htmlcov sites/
+          mv coverage.xml sites/
+
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./sites
